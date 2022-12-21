@@ -29,7 +29,7 @@ public class AddToCartServlet extends HttpServlet {
         if (product != null) {
             cart.addItem(productCode, new ClassicModelLineItem(product));
         }
-        response.getWriter().print(cart.getQuantity());
+        response.getWriter().print(cart.getNoOfItem());
     }
 
 

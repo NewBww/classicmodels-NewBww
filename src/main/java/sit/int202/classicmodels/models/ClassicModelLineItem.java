@@ -2,9 +2,9 @@ package sit.int202.classicmodels.models;
 
 import sit.int202.classicmodels.entities.Product;
 
-public class ClassicModelLineItem implements CartItem {
+public class ClassicModelLineItem implements CartItem{
     private Product product;
-    private int quantity;
+    private int quantity ;
     private double percentDiscount;
 
     public ClassicModelLineItem(Product product) {
@@ -42,8 +42,8 @@ public class ClassicModelLineItem implements CartItem {
 
     @Override
     public double getTotal() {
-        return getUnitPrice() * getQuantity() -
-                getUnitPrice() * getQuantity() * percentDiscount;
+        return getUnitPrice()*getQuantity() -
+                getUnitPrice()*getQuantity()*percentDiscount;
     }
 
     @Override
@@ -57,7 +57,9 @@ public class ClassicModelLineItem implements CartItem {
 
     @Override
     public String toString() {
-        return '{' + product.getProductName() + ", " + getUnitPrice() + ", " + quantity +
+        return  '{' + product.getProductName() +
+                ", " + getUnitPrice() +
+                ", " + quantity +
                 ", " + percentDiscount +
                 "% }";
     }

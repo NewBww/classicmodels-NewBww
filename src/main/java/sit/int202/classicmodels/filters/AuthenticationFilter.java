@@ -8,7 +8,7 @@ import jakarta.servlet.http.HttpSession;
 
 import java.io.IOException;
 
-@WebFilter(filterName = "AuthenticationFilter", servletNames = {"OfficeListServlet", "ProductListServlet"})
+@WebFilter(filterName = "AuthenticationFilter", servletNames = {"OfficeListServlet", "OrderListServlet"})
 public class AuthenticationFilter implements Filter {
     public void init(FilterConfig config) throws ServletException {
     }

@@ -20,11 +20,11 @@
         <c:forEach items="${products}" var="p" varStatus="vs">
             <div class="col-2 my-1 mx-3">
                 <div class="img-fluid img-thumbnail" title="${p.productCode}">
-                    <img src="model-images/${p.productLine}/${p.productCode}.jpg" height="120" width="180"/>
+                    <img src="assets/model-images/${p.productLine}/${p.productCode}.jpg" alt="${p.productName}" height="120" width="180"/>
                 </div>
                 <div>${p.productName} <span style="text-align: right">${p.msrp}</span>
                     <span style="color: darkred;margin-left: 2px;cursor: pointer">
-                    <i class="bi bi-bag-plus" onclick="addToCart('${p.productCode}')"></i></span>
+                    <em class="bi bi-bag-plus" onclick="addToCart('${p.productCode}')"></em></span>
                 </div>
             </div>
         </c:forEach>

@@ -24,7 +24,7 @@ public class ProductListServlet extends HttpServlet {
         request.setAttribute("page", page);
         request.setAttribute("pageSize", pageSize);
         request.setAttribute("itemCount", productRepository.countAll());
-        getServletContext().getRequestDispatcher("/ProductList.jsp").forward(request, response);
+        getServletContext().getRequestDispatcher("/components/ProductList.jsp").forward(request, response);
     }
 
     @Override
